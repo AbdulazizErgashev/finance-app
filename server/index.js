@@ -21,3 +21,4 @@ app.use(cors());
 
 // https://www.youtube.com/watch?v=uoJ0Tv-BFcQ&t=1474s
 // 1:46:00
+// https://cloud.mongodb.com/v2/67c7ff4300405762d9f840a4#/setup/personalization
