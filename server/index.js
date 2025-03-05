@@ -18,7 +18,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 // mongoose setup
+const PORT = process.env.PORT || 9000;
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(async () => {
+    app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+  })
+  .catch((error) => console.log(`${error} did not connect`));
 
 // https://www.youtube.com/watch?v=uoJ0Tv-BFcQ&t=1474s
-// 1:46:00
+// 1:50:00
 // https://cloud.mongodb.com/v2/67c7ff4300405762d9f840a4#/setup/personalization
