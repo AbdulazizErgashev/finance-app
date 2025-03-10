@@ -24,6 +24,8 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
+  // await mongoose
+  //   .connect(process.env.MONGO_URL)
   .then(async () => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
